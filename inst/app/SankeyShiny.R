@@ -267,7 +267,7 @@ server <- function(input, output, session) {
         left_nodes = cbind(left_nodes, diffFrame)
         
         p3 = ggplot(left_nodes, aes(fill = -log10(padj))) +
-            geom_rect(aes(xmin = ymin, xmax = ymax, ymin = 0, ymax = log2FC)) +
+            geom_rect(aes(xmin = ymin, xmax = ymax, ymin = 0, ymax = abs(log2FC))) +
             coord_flip() +
             scale_fill_gradient(low = "skyblue", high = "red") +
             scale_y_reverse() +
@@ -340,6 +340,7 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
 
 
 

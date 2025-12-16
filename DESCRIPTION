@@ -1,0 +1,26 @@
+Package: LittleTools
+Title: Interactive Sankey Combination Plotter
+Version: 0.1.0
+Authors@R: person("Wang", "Feng", email = "2675646727@qq.com", role = c("aut", "cre"))
+Description: An interactive Shiny application to visualize KEGG enrichment results 
+    combined with differential expression data using Sankey, Dot, and Bar charts.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    shiny,
+    ggplot2,
+    dplyr,
+    tidyr,
+    stringr,
+    cols4all,
+    colorspace,
+    ggnewscale,
+    patchwork,
+    readxl,
+    clusterProfiler,
+    org.Hs.eg.db,
+    ggsankey
+Remotes: 
+    davidsjoberg/ggsankey
+RoxygenNote: 7.3.3
